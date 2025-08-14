@@ -68,7 +68,7 @@ cd hungry-hippo
 
 ## 🌐 Live Demo
 
-[View Hungry Hippo Live](https://your-live-demo-link.com)
+[View Hungry Hippo Live](https://simple-gui.vercel.app/)
 
 ---
 
