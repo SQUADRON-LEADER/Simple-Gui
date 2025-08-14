@@ -1,0 +1,450 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+  --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  background: rgba(96, 91, 91, 0.95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+#navbar::before {
+  content: "";
+  background-color: rgb(96, 91, 91);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 94%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.21;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+  margin: 10px 34px;
+}
+
+#logo img {
+  height: 150px;
+  margin: 3px 6px;
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+  display: flex;
+  font-family: "Baloo Bhai", cursive;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#navbar ul li a {
+  color: white;
+  display: block;
+  padding: 8px 26px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#navbar ul li a:hover {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 1.2s;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  background: url("bg.jpg") no-repeat center center/cover;
+  height: 642px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.89;
+}
+
+#home h1 {
+  color: white;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+}
+
+#home p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Bree Serif", serif;
+}
+/* Services Section */
+#services {
+  margin: 34px;
+  display: flex;
+  gap: 30px;
+}
+#services .box {
+  border: 2px solid #ff4d4d;
+  padding: 34px;
+  margin: 2px 55px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(255, 77, 77, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  margin-bottom: 20px;
+}
+
+#services .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(255, 77, 77, 0.18);
+  border-color: #d90429;
+}
+
+#services .box img {
+  height: 160px;
+  margin: auto;
+  display: block;
+}
+
+#services .box p {
+  font-family: "Bree Serif", serif;
+}
+
+/* Clients Section */
+#client-section {
+  position: relative;
+}
+
+#client-section::before {
+  content: "";
+  position: absolute;
+  background: url("../bg.jpg");
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-item {
+  padding: 34px;
+}
+
+#clients img {
+  height: 124px;
+}
+
+/* Contact Section */
+#contact {
+  position: relative;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.75;
+  background: url("../contact.jpg") no-repeat center center/cover;
+}
+#contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  font-size: 1.1rem;
+}
+
+#contact-box form {
+  width: 40%;
+}
+
+#contact-box label {
+  font-size: 1.3rem;
+  font-family: "Bree Serif", serif;
+}
+
+footer {
+  background: rgb(0, 0, 0);
+  color: white;
+  padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary {
+  font-family: "Bree Serif", serif;
+  font-size: 3.8rem;
+  padding: 12px;
+  letter-spacing: 2px;
+  animation: fadeInUp 1.2s;
+}
+
+.h-secondary {
+  font-family: "Bree Serif", serif;
+  font-size: 2.3rem;
+  padding: 12px;
+  letter-spacing: 2px;
+  animation: fadeInUp 1.2s;
+}
+
+.btn {
+  padding: 10px 32px;
+  border: none;
+  background: linear-gradient(90deg, #ff4d4d 0%, #d90429 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 77, 77, 0.10);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.3);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+  z-index: 0;
+}
+
+.btn:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #d90429 0%, #ff4d4d 100%);
+  box-shadow: 0 4px 16px rgba(255, 77, 77, 0.18);
+  transform: scale(1.07);
+}
+
+.center {
+  text-align: center;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Modal Styles */
+#order-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#order-modal > div {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  max-width: 350px;
+  animation: popIn 0.5s;
+}
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Floating Action Button */
+#fab-order {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+  font-size: 2rem;
+  padding: 18px 22px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #ff4d4d 0%, #d90429 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,77,77,0.18);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+#fab-order:hover {
+  background: linear-gradient(90deg, #d90429 0%, #ff4d4d 100%);
+  transform: scale(1.1);
+}
+
+/* Navbar active link */
+#navbar ul li a.active {
+  background: #fff;
+  color: #d90429;
+  box-shadow: 0 2px 8px rgba(255,77,77,0.10);
+}
+
+/* Slider styles */
+#client-slider {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  min-height: 140px;
+}
+#client-slider .client-item {
+  display: none;
+  text-align: center;
+  transition: opacity 0.5s;
+}
+#client-slider .client-item img {
+  max-width: 120px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+/* --- Responsive Styles (from phone.css) --- */
+@media screen and (max-width: 1170px) {
+  #navbar {
+    flex-direction: column;
+  }
+  #navbar ul li a {
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+  }
+  #home {
+    height: 370px;
+    padding: 3px 28px;
+  }
+  #home::before {
+    height: 480px;
+  }
+  #home p {
+    font-size: 13px;
+  }
+  #services {
+    flex-direction: column;
+  }
+  #services .box {
+    padding: 14px;
+    margin: 2px 0px;
+    margin-bottom: 20px;
+  }
+  #clients {
+    flex-wrap: wrap;
+  }
+  #clients img {
+    width: 66px;
+    padding: 6px;
+    height: auto;
+    opacity: 1;
+  }
+  #contact-box form {
+    width: 80%;
+  }
+  .h-primary {
+    font-size: 26px;
+  }
+  .btn {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+}
+
+/* --- Parallax Effect for Home and Contact --- */
+#home::before, #contact::before {
+  background-attachment: fixed;
+}
+
+/* --- Smoother Client Slider --- */
+#client-slider .client-item {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  transition: opacity 0.7s;
+  z-index: 1;
+}
+#client-slider .client-item.active {
+  opacity: 1;
+  z-index: 2;
+}
+#client-slider {
+  position: relative;
+  min-height: 140px;
+}
+
+/* --- Section Transitions --- */
+section.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+section.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Interactive form fields */
+#contact-box input:focus, #contact-box textarea:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 2px 8px rgba(255,77,77,0.10);
+  outline: none;
+}
