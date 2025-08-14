@@ -19,10 +19,7 @@
 
 ## 📸 Screenshots
 
-![Homepage](screenshots/homepage.png)
-![Order Modal](screenshots/order-modal.png)
-![Client Slider](screenshots/client-slider.png)
-![Contact Form](screenshots/contact-form.png)
+
 
 ---
 
