@@ -98,6 +98,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## 📧 Contact
 
-**Author:** Aayush Kumar
-**Email:** [your-email@example.com](mailto:your-email@example.com)
-**GitHub:** [yourusername](https://github.com/yourusername)
+**Author:** Aayush Kumar ✨
+**Email:** [aayush05.af@example.com](mailto:aayush05.af@example.com)
+**GitHub:** [https://github.com/SQUADRON-LEADER](https://github.com/SQUADRON-LEADER)
